@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Dancing+Script:wght@700&display=swap"
     rel="stylesheet">
 
   <style>
@@ -111,64 +111,90 @@
     }
 
     /* CSS Logo: Just [my] holiday */
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+      transition: transform 0.25s ease;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .nav-brand:hover {
+      transform: scale(1.04);
+    }
+
     .logo-just {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: #2a2a2a;
-      border-radius: 10px;
-      padding: 5px 13px;
+      background: linear-gradient(175deg, #555 0%, #3a3a3a 30%, #252525 70%, #181818 100%);
+      border-radius: 13px;
+      padding: 9px 17px;
       font-family: 'Georgia', 'Playfair Display', serif;
-      font-size: 1.15rem;
+      font-size: 1.22rem;
       font-weight: 700;
-      color: #ffffff;
+      font-style: normal;
+      color: #fff;
       letter-spacing: 0.01em;
       line-height: 1;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 8px rgba(0,0,0,0.6);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+        0 4px 14px rgba(0, 0, 0, 0.7);
     }
 
     .logo-my {
-      font-family: 'Playfair Display', 'Georgia', serif;
-      font-style: italic;
-      font-size: 1.55rem;
-      font-weight: 400;
-      color: #ffffff;
-      padding: 0 5px;
+      font-family: 'Dancing Script', 'Playfair Display', cursive;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.1rem;
+      color: #fff;
+      padding: 0 6px;
       line-height: 1;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      text-shadow:
+        1px 2px 4px rgba(0, 0, 0, 0.55),
+        0 0 1px rgba(255, 255, 255, 0.15);
+      letter-spacing: -0.02em;
+    }
+
+    .logo-right-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .logo-holiday {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #AA0000, #CC0000, #DD1111);
-      border-radius: 10px;
-      padding: 5px 13px;
+      background: linear-gradient(175deg, #f03030 0%, #d90000 30%, #bb0000 70%, #960000 100%);
+      border-radius: 13px;
+      padding: 9px 22px;
       font-family: 'Georgia', 'Playfair Display', serif;
-      font-size: 1.15rem;
+      font-size: 1.22rem;
       font-weight: 700;
-      color: #ffffff;
+      font-style: normal;
+      color: #fff;
       letter-spacing: 0.01em;
       line-height: 1;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 2px 10px rgba(180,0,0,0.45);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.35),
+        0 4px 18px rgba(160, 0, 0, 0.6);
     }
 
     .logo-tagline {
       display: block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.52rem;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 0.56rem;
       font-weight: 400;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.05em;
-      text-align: right;
-      margin-top: 3px;
-      padding-right: 2px;
-    }
-
-    .logo-right-wrap {
-      display: flex;
-      flex-direction: column;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+      padding-left: 2px;
     }
 
     .nav-cta {
@@ -928,22 +954,24 @@
     }
 
     .footer-brand .logo-just {
-      font-size: 1.3rem;
-      padding: 6px 15px;
+      font-size: 1.45rem;
+      padding: 11px 20px;
+      border-radius: 15px;
     }
 
     .footer-brand .logo-my {
-      font-size: 1.75rem;
-      padding: 0 6px;
+      font-size: 2.5rem;
+      padding: 0 7px;
     }
 
     .footer-brand .logo-holiday {
-      font-size: 1.3rem;
-      padding: 6px 15px;
+      font-size: 1.45rem;
+      padding: 11px 26px;
+      border-radius: 15px;
     }
 
     .footer-brand .logo-tagline {
-      font-size: 0.58rem;
+      font-size: 0.65rem;
     }
 
     .footer-copy {
@@ -1287,14 +1315,33 @@
       </div>
 
       <div class="info-box rose-top reveal reveal-delay-2">
-        <div class="info-box-title">&#128179; Refund Policy</div>
+        <div class="info-box-title">&#128179; Refund &amp; Cancellation Policy</div>
+        <p style="font-size:0.82rem; color: var(--muted); margin-bottom: 16px; line-height:1.6;">At Just My Holiday, we
+          want you to book with confidence.</p>
+
         <div class="refund-highlight">
-          If the event is cancelled by <strong>JustMyHoliday</strong>, all participants will receive a <strong>100%
-            refund</strong>.
+          <strong style="display:block; margin-bottom:6px; color:var(--gold-light);">&#9989; 7-Day Refund
+            Guarantee</strong>
+          You may cancel your booking within <strong>7 days of making the payment</strong> and receive a <strong>100%
+            refund</strong>, provided the event has not already taken place.
         </div>
+
         <div class="refund-highlight">
-          Cancel up to <strong>7 days before the event</strong> for a <strong>full refund</strong>. Cancellations within
-          7 days may not be eligible for a refund unless otherwise stated.
+          <strong style="display:block; margin-bottom:6px; color:var(--gold-light);">&#128683; Event Cancellation by
+            Us</strong>
+          If an event is <strong>cancelled, postponed indefinitely, or discontinued</strong> by Just My Holiday for any
+          reason, <strong>100% of the amount you paid will be refunded</strong> to your original payment method.
+        </div>
+
+        <div class="refund-highlight">
+          <strong style="display:block; margin-bottom:6px; color:var(--gold-light);">&#9201; Refund Processing</strong>
+          Approved refunds will be processed within <strong>5&#8211;7 business days</strong>, although the exact time
+          may vary depending on your bank or payment provider.
+        </div>
+
+        <div class="refund-highlight" style="margin-bottom:0;">
+          <strong style="display:block; margin-bottom:6px; color:var(--gold-light);">&#128222; Contact</strong>
+          For any cancellation or refund-related queries, please contact our support team with your booking details.
         </div>
       </div>
     </div>
